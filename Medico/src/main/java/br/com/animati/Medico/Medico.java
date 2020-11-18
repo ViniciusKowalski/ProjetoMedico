@@ -1,10 +1,11 @@
-package br.com.animati.Entidades;
+package br.com.animati.Medico;
 
 import br.com.animati.Medico.ConselhoProfissionalType;
+import br.com.animati.Medico.EstadoType;
 
 public class Medico {
 	private long idMedico;
-	private String profissional;
+	private String profissao;
 	private ConselhoProfissionalType conselhoProfissional;
 	private String crm;
 	private String cns;
@@ -17,7 +18,12 @@ public class Medico {
 	public void setIdMedico(long idMedico) {
 		this.idMedico = idMedico;
 	}
-	
+	public String getProfissao() {
+		return profissao;
+	}
+	public void setProfissao(String profissao) {
+		this.profissao = profissao;
+	}
 	public ConselhoProfissionalType getConselhoProfissional() {
 		return conselhoProfissional;
 	}
@@ -65,12 +71,6 @@ public class Medico {
 	}
 	public void setProvisorio(Boolean provisorio) {
 		this.provisorio = provisorio;
-	}
-	public String getProfissional() {
-		return profissional;
-	}
-	public void setProfissional(String profissional) {
-		this.profissional = profissional;
 	}
 	private Boolean anestesista;
 	private Boolean provisorio;

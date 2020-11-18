@@ -1,6 +1,6 @@
-package br.com.animati.Entidades;
+package br.com.animati.Medico;
 
-import javax.management.loading.PrivateClassLoader;
+//import javax.management.loading.PrivateClassLoader;
 
 public enum EstadoType {
 	
@@ -68,7 +68,4 @@ public enum EstadoType {
 		 return estados;
 	 }
 	 
-
-
-
 }

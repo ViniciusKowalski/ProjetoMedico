@@ -3,6 +3,7 @@ package br.com.animati.Negocio;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.animati.Entidades.EstadoType;
 import br.com.animati.Entidades.Medico;
 
 public class MedicoServiceImpl implements MedicoService {
@@ -74,6 +75,7 @@ public class MedicoServiceImpl implements MedicoService {
 	} 
 
 	public Medico findMedicoByCrm(String crm) {
+		
 		Medico medicoEncontrou = null;
 		boolean encontrar = true;
 		int indice = 0;
@@ -89,12 +91,12 @@ public class MedicoServiceImpl implements MedicoService {
 		return medicoEncontrou;
 	}
 
-	public Medico findMedicoByCrmAndEstado(String crm) {
+	public Medico findMedicoByCrmAndEstado(EstadoType estadoType) {
 		Medico medicoEncontrou = null;
 		boolean encontrar = true;
 		int indice = 0;
 		do {
-				if(listaDeMedicos.get(indice).getCrm() == crm ) {
+				if(listaDeMedicos.get(indice).getEstadoCrm() == estadoType ) {
 					medicoEncontrou = listaDeMedicos.get(indice);
 					encontrar = false;
 				}
@@ -105,12 +107,12 @@ public class MedicoServiceImpl implements MedicoService {
 		return medicoEncontrou;
 	}
 
-	public Medico findMedicoByExecutor() {
+	public Medico findMedicoByExecutor(Boolean executor) {
 		Medico medicoEncontrou = null;
 		boolean encontrar = true;
 		int indice = 0;
 		do {
-				if(listaDeMedicos.get(indice).getExecutor() == null ) {
+				if(listaDeMedicos.get(indice).getExecutor() == true ) {
 					medicoEncontrou = listaDeMedicos.get(indice);
 					encontrar = false;
 				}
@@ -121,7 +123,7 @@ public class MedicoServiceImpl implements MedicoService {
 		return medicoEncontrou;
 	}
 
-	public Medico findMedicoByProvisorio() {
+	public Medico findMedicoByProvisorio(Boolean provisorio) {
 		Medico medicoEncontrou = null;
 		boolean encontrar = true;
 		int indice = 0;
